@@ -27,7 +27,7 @@
 </head>
 <body>
     <div class="fish">
-heading off to my next destination
+        <div id="quote"></div>
     |
     |
     |
@@ -47,5 +47,22 @@ heading off to my next destination
    / ..  |
    |/  `\|
     </div>
+
+    <script>
+        const immaDeepSeaFish = [
+            { text: "every fish's journey shapes the ocean's tale" },
+            { text: "from guppy to greatness, the journey defines"},
+            { text: "find purpose in the journey, not just the final splash"},
+            { text: "the destination awaits at the end of the line"},
+        ]
+
+        function displayQuote() {
+            const quoteBlock = document.getElementById('quote');
+            const randomIndex = Math.floor(Math.random() * immaDeepSeaFish.length);
+            quoteBlock.textContent = immaDeepSeaFish[randomIndex].text;
+        }
+
+        displayQuote()
+    </script>
 </body>
 </html>
